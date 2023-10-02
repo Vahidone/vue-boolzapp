@@ -18,7 +18,17 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+/* UTILITIES */
+.gray {
+  color: gray;
+}
+
+
+
+
 
 .container-csm {
   width: calc(100vw - 380px);
@@ -26,44 +36,158 @@ body {
   margin: 25px auto;
   
 }
+
+/* la parte sinistra (accounts side) */
 .box-users {
   width: 535px;
   height: 100%;
 }
-.box-messages {
-  width: calc(100% - 535px);
-  height: 100%;
-}
 
+
+/* ------------------  */
 header {
   width: 100%;
   height: 70px;
+  display: flex;
+  align-items: center;
   background-color: #EAEAEA;
+  padding: 5px;
 }
+
 .box-users header{
   border-right: 1px solid lightgray;
 } 
 
+.user-profile {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+.user-profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name-profile {
+  margin-left: 5px;
+}
+
+.box-menu {
+  font-size: 24px;
+  display: flex;
+  color: #B1B1B1;
+  justify-content: space-between;
+  margin-left: 320px;
+}
+
+/* -----------------  */
 
 .notifica {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 80px;
   background-color: #8EDAFB;
 }
+.user-profile.note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  background-color: white;
+  color: #8EDAFB;
+  margin-left: 30px;
+  border-radius: 50%;
+}
+
+.active-note {
+  height: 50px;
+  margin-left: 10px;
+}
+
+
+
+
+/* --------------------  */
 
 .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 50px;
   background-color: #EAEAEA;
 }
+
+.btn-search {
+  background-color: white;
+  color: gray;
+  padding-left: 20px;
+}
+
+
+
+/* ----------------------  */
 .account-users {
   width: 100%;
   height: calc(100% - 200px);
+  display: flex;
+}
+
+.accounts-side {
+  width: calc(100% - 20px);
+  height: 100%;
+  background-color: white;
+}
+
+.scroll-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 20px;
+  height: 100%;
+  padding: 5px 0;
+  background-color: #F1F1F1;
+  color: rgb(154, 153, 153);
+
+}
+
+.user-thumb {
+  width: 100%;
+  height: 80px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-bottom: 2px solid  #F1F1F1;
+  color: rgb(182, 180, 180);
+}
+
+.last-message {
+  height: 85%;
+  margin: auto 20px;
+  
+}
+
+.time-last-message {
+  margin-left: 175px;
+  margin-bottom: 43px;
 }
 
 
 
 
+
+
+
+/* la parte destra (messages side) */
+.box-messages {
+  width: calc(100% - 535px);
+  height: 100%;
+}
 
 .message-page {
   width: 100%;

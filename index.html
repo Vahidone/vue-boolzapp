@@ -26,17 +26,166 @@
 <body>
   <div id="app">
     <div class="container-csm d-flex ">
+      <!-- la parte sinistra ( accounts side) -->
       <div class="box-users">
-        <header></header>
-        <div class="notifica"></div>
-        <div class="search"></div>
-        <div class="account-users debug"></div>
+
+        <header>
+          <div class="user-profile">
+            <img src="img/avatar_8.jpg" alt="Profile">
+          </div>
+          <span class="name-profile">Vahid</span>
+          <div class="box-menu">
+            <i class="fa-solid fa-circle-notch"></i>
+            <i class="ms-3 fa-solid fa-message"></i>
+            <i class="ms-3 fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </header>
+
+
+        <div class="notifica">
+          <div class="user-profile note">
+            <i class="fa-solid fa-bell-slash"></i>
+          </div>
+          <div class="active-note">
+            <p class="mb-0">Ricevi notifiche di nuovi messaggi</p>
+            <a class="gray" href="#">Attiva notifiche desktop</a>
+          </div>
+        </div>
+
+
+
+        <div class="search ps-1 pe-1">
+          <div class="input-group">
+            <button class="btn btn-search" type="button" id="button-addon1"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Example text with button addon" aria-describedby="button-addon1">
+          </div>
+        </div>
+
+
+
+        <div class="account-users">
+          <div class="accounts-side">
+
+            <div class="user-thumb">
+              <div class="user-profile">
+                <img src="img/avatar_1.jpg" alt="avatar1">
+              </div>
+
+              <div class="last-message">
+                <h5 class="mb-0 text-black">Michele</h5>
+                <p>Utimo messaggio inviato</p>
+              </div>
+
+              <span class="time-last-message">12:00</span>
+            </div>
+
+            <div class="user-thumb">
+              <div class="user-profile">
+                <img src="img/avatar_2.jpg" alt="avatar1">
+              </div>
+
+              <div class="last-message">
+                <h5 class="mb-0 text-black">Fabio</h5>
+                <p>Utimo messaggio inviato</p>
+              </div>
+
+              <span class="time-last-message">12:00</span>
+            </div>
+
+            <div class="user-thumb">
+              <div class="user-profile">
+                <img src="img/avatar_3.jpg" alt="avatar1">
+              </div>
+
+              <div class="last-message">
+                <h5 class="mb-0 text-black">Samuele</h5>
+                <p>Utimo messaggio inviato</p>
+              </div>
+
+              <span class="time-last-message">12:00</span>
+            </div>
+
+            <div class="user-thumb">
+              <div class="user-profile">
+                <img src="img/avatar_4.jpg" alt="avatar1">
+              </div>
+
+              <div class="last-message">
+                <h5 class="mb-0 text-black">Alessandro B</h5>
+                <p>Utimo messaggio inviato</p>
+              </div>
+
+              <span class="time-last-message">12:00</span>
+            </div>
+
+            <div class="user-thumb">
+              <div class="user-profile">
+                <img src="img/avatar_5.jpg" alt="avatar1">
+              </div>
+
+              <div class="last-message">
+                <h5 class="mb-0 text-black">Alessandro L</h5>
+                <p>Utimo messaggio inviato</p>
+              </div>
+
+              <span class="time-last-message">12:00</span>
+            </div>
+
+            <div class="user-thumb">
+              <div class="user-profile">
+                <img src="img/avatar_6.jpg" alt="avatar1">
+              </div>
+
+              <div class="last-message">
+                <h5 class="mb-0 text-black">Claudia</h5>
+                <p>Utimo messaggio inviato</p>
+              </div>
+
+              <span class="time-last-message">12:00</span>
+            </div>
+
+            <div class="user-thumb">
+              <div class="user-profile">
+                <img src="img/avatar_7.jpg" alt="avatar1">
+              </div>
+
+              <div class="last-message">
+                <h5 class="mb-0 text-black">Federico</h5>
+                <p>Utimo messaggio inviato</p>
+              </div>
+
+              <span class="time-last-message">12:00</span>
+            </div>
+
+            <div class="user-thumb">
+              <div class="user-profile">
+                <img src="img/avatar_io.jpg" alt="avatar1">
+              </div>
+
+              <div class="last-message">
+                <h5 class="mb-0 text-black">Sofia</h5>
+                <p>Utimo messaggio inviato</p>
+              </div>
+
+              <span class="time-last-message">12:00</span>
+            </div>
+          </div>
+
+          <div class="scroll-side">
+            <i class="fa-solid fa-caret-up"></i>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+        </div>
       </div>
 
 
 
+
+      <!-- la parte destra ( messages side) -->
       <div class="box-messages">
-        <header></header>
+        <header>
+
+        </header>
         <div class="message-page"></div>
         <div class="input-text"></div>
       </div>
