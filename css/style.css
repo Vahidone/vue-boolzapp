@@ -1,4 +1,6 @@
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -43,10 +45,7 @@ body {
 }
 
 /* la parte sinistra (accounts side) **************************+*****
-.box-users {
-  width: 535px;
-  height: 100%;
-}
+
 
 
 /* ------------------  */
@@ -139,12 +138,15 @@ header {
   width: 100%;
   height: calc(100% - 200px);
   display: flex;
+
+  
 }
 
 .accounts-side {
   width: calc(100% - 20px);
   height: 100%;
   background-color: white;
+ 
 }
 
 .scroll-side {
@@ -157,6 +159,7 @@ header {
   padding: 5px 0;
   background-color: #F1F1F1;
   color: rgb(154, 153, 153);
+  
 
 }
 

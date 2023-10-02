@@ -66,109 +66,19 @@
         <div class="account-users">
           <div class="accounts-side">
 
-            <div class="user-thumb active">
+            <div v-for="contact in contacts"  class="user-thumb ">
               <div class="user-profile">
-                <img src="img/avatar_1.jpg" alt="avatar1">
+                <img :src="contact.avatar" alt="avatar1">
               </div>
 
               <div class="last-message">
-                <h5 class="mb-0 text-black">Michele</h5>
-                <p>Utimo messaggio inviato</p>
+                <h5 class="mb-0 text-black">{{ contact.name }}</h5>
+                <p>{{ getLastMessage(contact) }}</p>
               </div>
 
               <span class="time-last-message">12:00</span>
             </div>
 
-            <div class="user-thumb">
-              <div class="user-profile">
-                <img src="img/avatar_2.jpg" alt="avatar2">
-              </div>
-
-              <div class="last-message">
-                <h5 class="mb-0 text-black">Fabio</h5>
-                <p>Utimo messaggio inviato</p>
-              </div>
-
-              <span class="time-last-message">12:00</span>
-            </div>
-
-            <div class="user-thumb">
-              <div class="user-profile">
-                <img src="img/avatar_3.jpg" alt="avatar3">
-              </div>
-
-              <div class="last-message">
-                <h5 class="mb-0 text-black">Samuele</h5>
-                <p>Utimo messaggio inviato</p>
-              </div>
-
-              <span class="time-last-message">12:00</span>
-            </div>
-
-            <div class="user-thumb">
-              <div class="user-profile">
-                <img src="img/avatar_4.jpg" alt="avatar4">
-              </div>
-
-              <div class="last-message">
-                <h5 class="mb-0 text-black">Alessandro B</h5>
-                <p>Utimo messaggio inviato</p>
-              </div>
-
-              <span class="time-last-message">12:00</span>
-            </div>
-
-            <div class="user-thumb">
-              <div class="user-profile">
-                <img src="img/avatar_5.jpg" alt="avatar5">
-              </div>
-
-              <div class="last-message">
-                <h5 class="mb-0 text-black">Alessandro L</h5>
-                <p>Utimo messaggio inviato</p>
-              </div>
-
-              <span class="time-last-message">12:00</span>
-            </div>
-
-            <div class="user-thumb">
-              <div class="user-profile">
-                <img src="img/avatar_6.jpg" alt="avatar6">
-              </div>
-
-              <div class="last-message">
-                <h5 class="mb-0 text-black">Claudia</h5>
-                <p>Utimo messaggio inviato</p>
-              </div>
-
-              <span class="time-last-message">12:00</span>
-            </div>
-
-            <div class="user-thumb">
-              <div class="user-profile">
-                <img src="img/avatar_7.jpg" alt="avatar7">
-              </div>
-
-              <div class="last-message">
-                <h5 class="mb-0 text-black">Federico</h5>
-                <p>Utimo messaggio inviato</p>
-              </div>
-
-              <span class="time-last-message">12:00</span>
-            </div>
-
-            <div class="user-thumb">
-              <div class="user-profile">
-                <img src="img/avatar_io.jpg" alt="avatario">
-              </div>
-
-              <div class="last-message">
-                <h5 class="mb-0 text-black">Sofia</h5>
-                <p>Utimo messaggio inviato</p>
-              </div>
-
-              <span class="time-last-message">12:00</span>
-            </div>
           </div>
 
           <div class="scroll-side">
@@ -180,6 +90,7 @@
 
 
 
+      
 
       <!-- la parte destra ( messages side) -->
       <div class="box-messages">
