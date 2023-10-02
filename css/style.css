@@ -202,13 +202,19 @@ header {
 
 /* la parte destra (messages side) ***************************************/
 
+.last-access {
+  height: 85%;
+  margin: auto 10px;
+  color: rgb(149, 147, 147);
+}
+
 .box-messages {
   width: calc(100% - 535px);
   height: 100%;
 }
 
 .box-menu.right {
-  margin-left: 990px;
+  margin-left: 805px;
 }
 
 
