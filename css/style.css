@@ -189,6 +189,12 @@ header {
   height: 100%;
 }
 
+.box-menu.right {
+  margin-left: 990px;
+}
+
+
+/* --------------------  */
 .message-page {
   width: 100%;
   height: calc(100% - 140px);
