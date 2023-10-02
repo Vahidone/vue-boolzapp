@@ -177,6 +177,10 @@ header {
   color: rgb(182, 180, 180);
 }
 
+.user-thumb:hover {
+  background-color: #E8EBEB;
+}
+
 .last-message {
   width: 175px;
   height: 85%;
@@ -197,6 +201,7 @@ header {
 
 
 /* la parte destra (messages side) ***************************************/
+
 .box-messages {
   width: calc(100% - 535px);
   height: 100%;
@@ -222,6 +227,7 @@ header {
 
 .my-message-block,
 .users-message-block {
+  min-width: 325px;
   height: 70px;
   line-height: 70px;
   border-radius: 14px;
