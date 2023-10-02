@@ -178,4 +178,11 @@ createApp ({
 
   },
 
+  methods: {
+    getLastMessage(contact) {
+      const lastMessage = contact.messages[contact.messages.length - 1];
+      return lastMessage ? lastMessage.message : '';
+    }
+  }
+
 }).mount('#app');
