@@ -37,7 +37,7 @@ body {
   
 }
 
-/* la parte sinistra (accounts side) */
+/* la parte sinistra (accounts side) **************************+*****
 .box-users {
   width: 535px;
   height: 100%;
@@ -183,7 +183,7 @@ header {
 
 
 
-/* la parte destra (messages side) */
+/* la parte destra (messages side) ***************************************/
 .box-messages {
   width: calc(100% - 535px);
   height: 100%;
@@ -204,7 +204,41 @@ header {
   width: calc(100% - 20px);
   height: 100%;
   background-image: url(../img/mine.jpg);
+  padding: 60px 100px;
 }
+
+.my-message-block,
+.users-message-block {
+  height: 70px;
+  line-height: 70px;
+  border-radius: 14px;
+  padding-left: 20px;
+  padding-right: 100px;
+  position: relative;
+}
+
+.my-message-block {
+  background-color: #D5F9BA;
+  float: right;
+}
+
+.users-message-block {
+  background-color: white;
+  float: left;
+}
+
+.time-invio {
+  position: absolute;
+  right: 5px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgb(189, 188, 188);
+}
+
+
+
+
+
 
 
 /* -----------------  */
