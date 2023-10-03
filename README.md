@@ -17,3 +17,7 @@ Click sul contatto mostra la conversazione del contatto cliccato
 
 ### Pseudocodice:
 1. Aggiungere classe active quando un account viene cliccato tramite una variabile che tenga traccia dell'elemento cliccato e un metodo che imposta la variabile sull'indice del contatto su cui è stato fatto click. E poi in html mettere una condizione per attivare la classe active.
+
+2. Creare una variabile come per esempio activeMessages all'interno del oggetto data per conservare i messaggi del contatto attivo.
+3. Assegnare activeMessages ai messaggi di quel contatto nel metodo setActiveContact.
+3. Aggiungere una sezione per visualizzare i messaggi del contatto attivo utilizzando un ciclo v-for che attraversa activeMessages.
