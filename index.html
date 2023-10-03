@@ -123,16 +123,16 @@
         <!-- ---------------------  -->
         <div class="message-part">
           <div class="message-page">
-            <div class="div">
-              <div class="my-message-block">
-                <p class="d-inline">Hai portato a spasso il cane?</p>
-                <span class="time-invio">12:30</span>
+            <div v-for="(message, messageIndex) in activeMessages" :key="messageIndex">
+              <div :class="message.status === 'sent' ? 'my-message-block' : 'users-message-block'">
+                <p class="d-inline">{{ message.message }}</p>
+                <span class="time-invio">{{ message.date }}</span>
               </div>
 
-              <div class="users-message-block">
-                <p class="d-inline">Tutto fatto!</p>
-                <span class="time-invio">12:30</span>
-              </div>
+              <!-- <div class="users-message-block">
+                <p class="d-inline">{{ message.message }}</p>
+                <span class="time-invio">{{ message.date }}</span>
+              </div> -->
             </div>
            
 
@@ -146,8 +146,6 @@
 
         </div>
        
-
-
 
         <!-- ----------------------  -->
         <div class="input-down">
