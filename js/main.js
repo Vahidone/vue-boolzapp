@@ -7,7 +7,9 @@ createApp ({
 
     return {
 
+      activeMessages: [],
       activeContact: null,
+      
 
       contacts: [
         {
@@ -193,6 +195,7 @@ createApp ({
 
     setActiveContact(index) {
       this.activeContact = index;
+      this.activeMessages = this.contacts[index].messages;
     },
   }
 
