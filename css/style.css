@@ -23,6 +23,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.container-csm {
+  width: calc(100vw - 380px);
+  min-width: 1000px;
+  height: calc(100vh - 50px);
+  margin: 25px auto;
+  
+}
+
+
+
 /* UTILITIES */
 .gray {
   color: gray;
@@ -30,19 +40,19 @@ body {
 
 
 .active {
-  background-color: #E8EBEB;
+  background-color: #e2e5e5;
+}
+
+i:hover {
+  color: rgb(69, 68, 68);
+  cursor: pointer;
 }
 
 
 
 
 
-.container-csm {
-  width: calc(100vw - 380px);
-  height: calc(100vh - 50px);
-  margin: 25px auto;
-  
-}
+
 
 /* la parte sinistra (accounts side) **************************+*****
 
@@ -142,7 +152,6 @@ header {
   width: 100%;
   height: calc(100% - 200px);
   display: flex;
-
   
 }
 
@@ -164,6 +173,7 @@ header {
   background-color: #F1F1F1;
   color: rgb(154, 153, 153);
   
+  
 
 }
 
@@ -178,7 +188,8 @@ header {
 }
 
 .user-thumb:hover {
-  background-color: #E8EBEB;
+  background-color: #f2f4f4;
+  cursor: pointer;
 }
 
 .last-message {
@@ -238,8 +249,8 @@ header {
   line-height: 70px;
   border-radius: 14px;
   padding-left: 20px;
-  padding-right: 100px;
-  position: relative;
+  padding-right: 10px;
+  clear: both;
 }
 
 .my-message-block {
@@ -253,13 +264,11 @@ header {
 }
 
 .time-invio {
-  position: absolute;
-  right: 5px;
+  float: right;
   margin-top: 20px;
   font-size: 14px;
   color: rgb(189, 188, 188);
 }
-
 
 
 
