@@ -16,4 +16,4 @@ Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare 
 Click sul contatto mostra la conversazione del contatto cliccato
 
 ### Pseudocodice:
-1. Aggiungere classe active quando un account viene cliccato.
+1. Aggiungere classe active quando un account viene cliccato tramite una variabile che tenga traccia dell'elemento cliccato e un metodo che imposta la variabile sull'indice del contatto su cui è stato fatto click. E poi in html mettere una condizione per attivare la classe active.
