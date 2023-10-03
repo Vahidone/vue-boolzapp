@@ -66,13 +66,14 @@
 
 
 
+        
 
         <!-- lista cei contatti  -->
 
         <div class="account-users">
           <div class="accounts-side">
 
-            <div v-for="contact in contacts"  class="user-thumb">
+            <div v-for="(contact, index) in contacts" :key="index" class="user-thumb" @click="setActiveContact(index)" :class="{ 'active': index === activeContact }">
               <div class="user-profile">
                 <img :src="contact.avatar"  alt="avatar1">
               </div>
@@ -118,6 +119,7 @@
         </header>
 
 
+        
         <!-- ---------------------  -->
         <div class="message-part">
           <div class="message-page">
