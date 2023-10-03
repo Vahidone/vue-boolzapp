@@ -3,7 +3,11 @@ const {createApp} = Vue;
 
 createApp ({
   data () {
+    
+
     return {
+
+      activeContact: null,
 
       contacts: [
         {
@@ -167,8 +171,7 @@ createApp ({
                 }
             ],
         }
-    ]
-    
+      ]
     
     
 
@@ -178,6 +181,7 @@ createApp ({
 
   },
 
+  
   methods: {
 
     // questo metodo retituisce l'ultimo messaggio
@@ -185,7 +189,11 @@ createApp ({
     getLastMessage(contact) {
       const lastMessage = contact.messages[contact.messages.length - 1];
       return lastMessage ? lastMessage.message : '';
-    }
+    },
+
+    setActiveContact(index) {
+      this.activeContact = index;
+    },
   }
 
 }).mount('#app');
