@@ -1,176 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <!-- link VUE.JS cdn  -->
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
-   <!-- link FONT AWESOME  -->
- <link
- rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
- integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
- crossorigin="anonymous"
-/>
-
- <!-- link BOOTSTRAP  -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
-  <!-- link CSS  -->
-  <link rel="stylesheet" href="css/style.css">
-
+  <!-- link BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>esercizio prova</title>
+  <!-- link VUE.JS  -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- link CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- link FONTAWSOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- link LUXON -->
+  <script src="
+  https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js
+  "></script>
+  <title>BOOLZAPP</title>
 </head>
 <body>
-  <div id="app">
-    <div class="container-csm d-flex ">
-      <!-- la parte sinistra ( accounts side) -->
-      <div class="box-users">
+  
+  <div id="app" class="main-container d-flex align-items-center ">
 
-        <header>
-          <div class="user-profile">
-            <img src="img/avatar_8.jpg" alt="Profile">
+    <div class="container-csm d-flex">
+
+      <!-- la parte sinistra  -->
+      <aside>
+        <div class="top-aside d-flex justify-content-between align-items-center  ">
+          <div class="top-icon-circle d-flex align-items-center">
+            <img src="img/avatar_8.jpg" alt="avatar_io">
+            <h5>Vahid</h5>
           </div>
-          <span class="name-profile">Vahid</span>
-          <div class="box-menu">
+          <div class="icons-top">
             <i class="fa-solid fa-circle-notch"></i>
-            <i class="ms-3 fa-solid fa-message"></i>
-            <i class="ms-3 fa-solid fa-ellipsis-vertical"></i>
+            <i class="fa-solid fa-message me-3  ms-3 "></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
           </div>
-        </header>
+        </div>
 
-
-        <div class="notifica">
-          <div class="user-profile note">
+        <div class="notification-block d-flex ">
+          <div class="top-icon-circle d-flex justify-content-center align-items-center me-2 ms-2">
             <i class="fa-solid fa-bell-slash"></i>
           </div>
-          <div class="active-note">
-            <p class="mb-0">Ricevi notifiche di nuovi messaggi</p>
-            <a class="gray" href="#">Attiva notifiche desktop</a>
+          <div class="d-flex flex-column ">
+            <span>Ricevi notifiche di nuovi messaggi</span>
+            <a href="#">Attiva notifiche desktop</a>
           </div>
         </div>
 
-
-      
-
-         <!-- search bar  -->
-
-        <div class="search ps-1 pe-1">
-          <div class="input-group">
-            <button class="btn btn-search" type="button" id="button-addon1"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Example text with button addon" aria-describedby="button-addon1">
-          </div>
+        <!-- barra di ricerca  -->
+        <div class="research-block">
+          <input 
+          v-model.trim="research"
+          type="text" 
+          placeholder="&#xF002; Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome" />
         </div>
-
 
 
         
-
-        <!-- lista cei contatti  -->
-
-        <div class="account-users">
-          <div class="accounts-side">
-
-            <div v-for="(contact, index) in contacts" :key="index" class="user-thumb" @click="setActiveContact(index)" :class="{ 'active': index === activeContact }">
-              <div class="user-profile">
-                <img :src="contact.avatar"  alt="avatar1">
-              </div>
-
-              <div class="last-message">
-                <h5 class="mb-0 text-black">{{ contact.name }}</h5>
-                <p>{{ getLastMessage(contact) }}</p>
-              </div>
-
-              <span class="time-last-message">12:00</span>
-            </div>
-
-          </div>
-
-          <div class="scroll-side">
-            <i class="fa-solid fa-caret-up"></i>
-            <i class="fa-solid fa-caret-down"></i>
-          </div>
-        </div>
-      </div>
-
-
-
-      
-
-      <!-- la parte destra ( messages side) -->
-      <div class="box-messages">
-        <header>
-          <div class="user-profile">
-            <img src="img/avatar_1.jpg" alt="">
-          </div>
-
-          <div class="last-access">
-            <h5 class="mb-0 text-black">Michele</h5>
-            <p>Ultimo accesso oggi alle 12:00</p>
-          </div>
-
-          <div class="box-menu right">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-paperclip ms-3"></i>
-            <i class="ms-4 fa-solid fa-ellipsis-vertical"></i>
-          </div>
-        </header>
-
+        <div class="contacts-chat">
 
         
-        <!-- ---------------------  -->
-        <div class="message-part">
-          <div class="message-page">
-            <div v-for="(message, messageIndex) in activeMessages" :key="messageIndex">
-              <div :class="message.status === 'sent' ? 'my-message-block' : 'users-message-block'">
-                <p class="d-inline">{{ message.message }}</p>
-                <span class="time-invio">{{ message.date }}</span>
+          <div 
+          @click="switchClick(index)"
+          v-for="(profile,index) in searchContacts"
+          :class="(actualIndex === index) ? 'active':''"
+          class="contact row justify-content-between">
+            <div class="chat-profile col d-flex ">
+              <img 
+              :src="profile.avatar" alt="avatar_1">
+
+              <div v-if="profile.messages.length > 0" class="block-info col">
+                <div  class="info">
+                  <span class="actual-time f-right">{{profile.messages[profile.messages.length - 1].date}}</span>
+                  <h5>{{profile.name}}</h5>
+                  <span class="last-message">{{profile.messages[profile.messages.length - 1].message}}</span>
+                </div>
               </div>
 
-              <!-- <div class="users-message-block">
-                <p class="d-inline">{{ message.message }}</p>
-                <span class="time-invio">{{ message.date }}</span>
-              </div> -->
+              </div>
+          </div> 
+          
+        </div>
+      </aside>
+      
+
+
+      <!-- la parte destra ( i messaggi) -->
+      <div class="message-block">
+        <div class="top-message-block">
+
+          <div class="row h-100  justify-content-between align-items-center ">
+
+            <div class="col d-flex  align-items-center ">
+              <img class="top-icon-circle" :src="contacts[actualIndex].avatar" alt="avatar_1">
+              <div class="info">
+                <h5>{{contacts[actualIndex].name}}</h5>
+                <span class="last-login">Ultimo accesso oggi alle 12:00</span>
+              </div>
             </div>
-           
 
-          </div>
+            <div class="col-3 d-flex justify-content-end">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-paperclip me-3  ms-3 "></i>
+              <i class="fa-solid fa-ellipsis-vertical me-3"></i>
+            </div>
 
-
-          <div class="scroll-side">
-            <i class="fa-solid fa-caret-up"></i>
-            <i class="fa-solid fa-caret-down"></i>
-          </div>
+          </div> 
 
         </div>
-       
 
-        <!-- ----------------------  -->
-        <div class="input-down">
-          <div class="emoji">
+        
+        <div class="chat-text">
+          <div 
+           v-for="(text,index) in contacts[actualIndex].messages"  class="my_container-msg">
+
+            <div>
+              <div 
+              :class="text.status"
+              class="chat d-flex flex-column ">
+              
+                <a class="nav-link align-self-end " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </a>
+              
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Message Info</a></li>
+                  <li><a 
+                    @click="removeMessage(index)" class="dropdown-item" href="#">Delete Message
+                    </a>
+                  </li>
+                </ul>
+                <span span class="text">{{text.message}}</span>
+                <span class="actual-time align-self-end">{{text.date}}</span>
+              </div>
+            </div>
+
+          
+
+          </div>
+        </div>
+
+        <!-- input (inserire nuovi text)  -->
+        <div class="send-message d-flex justify-content-between align-items-center ">
+
+          <div class="emoji me-4 ms-4">
             <i class="fa-regular fa-face-smile"></i>
           </div>
 
-          <div class="input-group input-write">
-            <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Example text with button addon" aria-describedby="button-addon1">
+          <div class="input-send flex-grow-1 ">
+            <input 
+            v-model.trim="newMessage"
+            @keyup.enter="addMessage"
+            type="text" 
+            placeholder="Scrivi un messaggio"
+            >
           </div>
 
-          <div class="voice">
+          <div class="audio me-4 ms-4">
             <i class="fa-solid fa-microphone"></i>
           </div>
         </div>
+
       </div>
+  
     </div>
-
-
-
-    
-
   </div>
 
-  <!-- link JAVASCRIPT  -->
+
+
+<!-- link JAVASCRIPT  -->
   <script src="js/main.js"></script>
 </body>
 </html>
