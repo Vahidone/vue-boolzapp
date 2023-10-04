@@ -1,305 +1,227 @@
-
-
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.debug {
-  background-color: rgb(237, 195, 195);
-  border: 1px solid black;
-  min-height: 50px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+.container-csm {
+  width: 82%;
+  height: 95%;
+  margin: auto;
+}
 
-body {
+/* UTILITIES  */
+
+.block-information {
+  padding-top: 7px;
+  line-height: 20px;
+}
+
+h5 {
+  margin-bottom: 0;
+}
+img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+i {
+  color: rgb(177, 177, 177);
+}
+i:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+.row {
+  margin: 0;
+}
+
+input:focus{
+	outline: none;
+}
+
+.main-container {
   background: linear-gradient(to top, #DADBD3 calc(100% - 145px), #019688 calc(100% - 145px));
   background-size: 100% 100%;
   margin: 0;
   padding: 0;
   height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.container-csm {
-  width: calc(100vw - 380px);
-  min-width: 1000px;
-  height: calc(100vh - 50px);
-  margin: 25px auto;
   
 }
 
 
 
-/* UTILITIES */
-.gray {
-  color: gray;
+.message-block {
+  width: 65%;
+  height: 100%;
+  background-image: url("/img/mine.jpg");
 }
 
-
-.active {
-  background-color: #e2e5e5;
+.chat-text {
+  height: calc(100% - 120px);
+  padding-top: 40px;
+  overflow-y: scroll;
 }
 
-i:hover {
-  color: rgb(69, 68, 68);
-  cursor: pointer;
+.my_container-msg {
+  width: 85%;
+  margin: 0 auto;
 }
 
-
-
-
-
-
-
-/* la parte sinistra (accounts side) **************************+*****
-
-
-
-/* ------------------  */
-
-.box-users  {
-  width: 535px;
-}
-header {
-  width: 100%;
+.send-message {
   height: 70px;
-  display: flex;
-  align-items: center;
-  background-color: #EAEAEA;
-  padding: 5px;
+  background-color: rgb(234, 234, 234);
 }
 
-.box-users header{
-  border-right: 1px solid lightgray;
-} 
-
-.user-profile {
-  width: 50px;
-  height: 50px;
-  overflow: hidden;
+.send-message i {
+  color: rgb(107, 115, 118);
+  font-size: 1.2rem;
 }
-.user-profile img {
+
+.input-send input {
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
+  padding-left: 10px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
 }
 
-.name-profile {
-  margin-left: 5px;
+
+
+
+.chat{
+  max-width: 300px;
+  margin-bottom: 10px;
+  border-radius: 10px; 
+  padding:  0 10px ;
 }
 
-.box-menu {
-  font-size: 24px;
-  display: flex;
-  color: #B1B1B1;
-  justify-content: space-between;
-  margin-left: 320px;
+
+.sent {
+  margin-left: auto;
+  background-color: rgb(213, 249, 186);
 }
 
-/* -----------------  */
 
-.notifica {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 80px;
-  background-color: #8EDAFB;
-}
-.user-profile.note {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 22px;
+
+.received {
   background-color: white;
-  color: #8EDAFB;
-  margin-left: 30px;
-  border-radius: 50%;
 }
 
-.active-note {
-  height: 50px;
-  margin-left: 10px;
+.chat-text .actual-time {
+  padding: 2px 8px 2px 0;
 }
 
-
-
-
-/* --------------------  */
-
-.search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  background-color: #EAEAEA;
+.actual-time {
+  font-size: .7rem;
+  color: #999;
 }
 
-.btn-search {
-  background-color: white;
-  color: gray;
-  padding-left: 20px;
+.last-login {
+  color: rgb(147, 162, 172);
+  font-size: .7rem;
 }
 
-
-
-/* ----------------------  */
-.account-users {
-  width: 100%;
-  height: calc(100% - 200px);
-  display: flex;
-  
+.top-message-block img,.top-aside img {
+  margin-right: 10px;
 }
 
-.accounts-side {
-  width: calc(100% - 20px);
+/* ASIDE */
+aside {
+  width: 35%;
+  min-width:300px ;
   height: 100%;
-  background-color: white;
- 
-}
-
-.scroll-side {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 20px;
-  height: 100%;
-  padding: 5px 0;
-  background-color: #F1F1F1;
-  color: rgb(154, 153, 153);
-  
-  
-
-}
-
-.user-thumb {
-  width: 100%;
-  height: 80px;
-  padding-left: 20px;
-  display: flex;
-  align-items: center;
-  border-bottom: 2px solid  #F1F1F1;
-  color: rgb(182, 180, 180);
-}
-
-.user-thumb:hover {
-  background-color: #f2f4f4;
-  cursor: pointer;
 }
 
 .last-message {
-  width: 175px;
-  height: 85%;
-  margin: auto 20px;
-  overflow: hidden;
-  
+  color: rgb(194, 189, 194);
+  font-size: .8rem;
 }
 
-.time-last-message {
-  margin-left: 175px;
-  margin-bottom: 43px;
+.top-aside, .top-message-block {
+  height: 60px;
+  background-color: rgb(234, 234, 234);
 }
 
-
-
-
-
-
-
-/* la parte destra (messages side) ***************************************/
-
-.last-access {
-  height: 85%;
-  margin: auto 10px;
-  color: rgb(149, 147, 147);
+.top-aside {
+  border-right: 1px solid rgba(128, 128, 128, 0.597);
+  padding: 10px;
 }
 
-.box-messages {
-  width: calc(100% - 535px);
-  height: 100%;
-}
-
-.box-menu.right {
-  margin-left: 805px;
-}
-
-
-/* --------------------  */
-.message-part {
-  display: flex;
-  width: 100%;
-  height: calc(100% - 140px);
-}
-.message-page {
-  width: calc(100% - 20px);
-  height: 100%;
-  background-image: url(../img/mine.jpg);
-  padding: 60px 100px;
-}
-
-.my-message-block,
-.users-message-block {
-  min-width: 325px;
-  height: 70px;
-  line-height: 70px;
-  border-radius: 14px;
-  padding-left: 20px;
-  padding-right: 10px;
-  clear: both;
-}
-
-.my-message-block {
-  background-color: #D5F9BA;
-  float: right;
-}
-
-.users-message-block {
+.top-icon-circle {
+  width: 50px;
+  height: 50px;
   background-color: white;
-  float: left;
+  border-radius: 50%;
 }
 
-.time-invio {
-  float: right;
-  margin-top: 20px;
-  font-size: 14px;
-  color: rgb(189, 188, 188);
+.notification-block {
+  padding: 10px;
+  font-size: .8rem;
+  background-color: rgb(142, 218, 252);
 }
 
 
+.notification-block i {
+  color: rgb(142, 218, 252);
+  font-size: 1.2rem;
+}
 
+.notification-block a {
+  color: rgb(98, 131, 157);
+}
 
+.research-block {
+  padding: 10px;
+  background-color: white;
+}
 
-
-/* -----------------  */
-.input-down {
+.research-block > input {
   width: 100%;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  background-color: #F3EEE9;
+  height: 40px;
+  padding-left: 20px;
+  border: 1px solid rgb(247, 247, 247);
 }
 
-.input-write {
-  width: calc(100% - 200px);
-  height: 80%;
-  margin: auto 0px;
-  color: rgb(186, 183, 183);
+.contacts-chat {
+  height: calc(100% - 179px);
+  background-color: rgb(255, 255, 255);
+  overflow-y: scroll;
 }
 
-.emoji,
-.voice {
-  width: 100px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 28px;
-  color: gray;
-  font-weight: bold;
+.contact {
+  height: 80px;
+  padding-top: 10px;
 }
 
+
+.contact:hover {
+  cursor: pointer;
+}
+
+.contact.active {
+  background-color: rgb(232, 231, 233);
+}
+
+h6 {
+  margin-bottom: 0;
+  font-size: .9rem;
+}
+
+.contact .chat-profile img{
+  margin-right: 15px;
+}
+
+.chat-profile {
+  width: 60px;
+  height: 60px;
+}
+
+.f-right {
+  float: right;
+}
