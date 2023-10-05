@@ -20,25 +20,26 @@
 </head>
 <body>
   
+  
   <div id="app" class="main-container d-flex align-items-center ">
 
     <div class="container-csm d-flex">
 
       <!-- la parte sinistra  -->
       <aside>
-        <div class="top-aside d-flex justify-content-between align-items-center  ">
+        <div class="up-aside up-aside d-flex justify-content-between align-items-cente" >
           <div class="top-icon-circle d-flex align-items-center">
-            <img src="img/avatar_8.jpg" alt="avatar_io">
+            <img src="img/avatar_8.jpg">
             <h5>Vahid</h5>
           </div>
-          <div class="icons-top">
+          <div class="icons-top mt-2">
             <i class="fa-solid fa-circle-notch"></i>
-            <i class="fa-solid fa-message me-3  ms-3 "></i>
+            <i class="fa-solid fa-message me-3 ms-3 "></i>
             <i class="fa-solid fa-ellipsis-vertical"></i>
           </div>
         </div>
 
-        <div class="notification-block d-flex ">
+        <div class="notifica-part d-flex ">
           <div class="top-icon-circle d-flex justify-content-center align-items-center me-2 ms-2">
             <i class="fa-solid fa-bell-slash"></i>
           </div>
@@ -57,12 +58,12 @@
         </div>
 
 
-        
+        <!-- la lista dei contatti  -->
         <div class="contacts-list">
 
         
           <div 
-          @click="switchClick(index)"
+          @click="cambioClick(index)"
           v-for="(profile,index) in searchContacts"
           :class="(actualIndex === index) ? 'active':''"
           class="contact row justify-content-between">
@@ -85,11 +86,10 @@
       </aside>
       
 
-
       <!-- la parte destra ( i messaggi) -->
-      
-      <div class="message-block">
-        <div class="top-message-block">
+
+      <div class="message-part">
+        <div class="top-message-part">
 
           <div class="row h-100  justify-content-between align-items-center ">
 
@@ -128,7 +128,7 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Message Info</a></li>
                   <li><a 
-                    @click="removeMessage(index)" class="dropdown-item" href="#">Delete Message
+                    @click="deleteMessage(index)" class="dropdown-item" href="#">Delete Message
                     </a>
                   </li>
                 </ul>
@@ -171,6 +171,7 @@
 
 
 <!-- link JAVASCRIPT  -->
-  <script src="js/main.js"></script>
+
+<script type="module" src="./js/main.js"></script>
 </body>
 </html>
